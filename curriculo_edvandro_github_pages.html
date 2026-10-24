@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Currículo e portfólio profissional de Edvandro Amancio dos Santos, profissional de suporte de TI, redes e DevOps em formação.">
+<title>Edvandro Amancio dos Santos | Currículo</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --site-primary: #12233f;
+  --site-on-primary: #ffffff;
+  --site-secondary: #d8e6f7;
+  --site-on-secondary: #15243a;
+  --site-background: #f3f6fb;
+  --site-on-background: #172338;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  --surface: light-dark(#ffffff, #17202d);
+  --surface-muted: light-dark(#edf2f9, #202d3e);
+  --text-muted: light-dark(#52627a, #bac6d6);
+  --line: light-dark(#dbe3ef, #344357);
+  --accent: light-dark(#1769aa, #78b9f2);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.65; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+#app { background-color: var(--site-background); color: var(--site-on-background); min-height: 100vh; border-radius: 0; }
+.hero { background: var(--site-primary); color: var(--site-on-primary); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; width: 360px; height: 360px; right: -100px; top: -160px; border: 1px solid currentColor; border-radius: 50%; opacity: calc(.13 * var(--site-decoration-opacity)); box-shadow: 0 0 0 35px transparent, 0 0 0 70px currentColor; pointer-events: none; }
+.hero-inner { max-width: 1080px; margin: auto; padding: calc(64px * var(--site-spacing-scale)) 26px calc(56px * var(--site-spacing-scale)); position: relative; z-index: 1; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 750; opacity: .78; }
+h1 { font-family: var(--site-font-heading); font-size: calc(clamp(2.2rem, 5vw, 4.2rem) * var(--site-heading-scale)); letter-spacing: -.045em; line-height: 1.07; max-width: 760px; margin: 15px 0; }
+.hero p { font-size: clamp(1rem, 2vw, 1.2rem); max-width: 700px; color: #d7e3f4; margin: 0 0 24px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.btn { display: inline-flex; align-items: center; gap: 9px; border-radius: calc(9px * var(--site-radius-scale)); padding: 11px 16px; font-weight: 700; border: 1px solid #ffffff55; color: white; background: #ffffff12; }
+.btn.primary { background: var(--site-secondary); color: var(--site-on-secondary); border-color: transparent; }
+.btn:hover { text-decoration: none; filter: brightness(1.06); }
+.nav-wrap { background: var(--surface); border-bottom: 1px solid var(--line); }
+nav { max-width: 1080px; margin: auto; padding: 0 26px; display: flex; gap: 22px; overflow-x: auto; }
+nav a { display: block; white-space: nowrap; padding: 15px 0; font-size: .9rem; font-weight: 650; color: var(--site-on-background); }
+main { max-width: 1080px; padding: 42px 26px 70px; margin: auto; }
+section { margin: 0 0 42px; scroll-margin-top: 20px; }
+.section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; }
+.section-head .num { color: var(--accent); font-size: .82rem; font-weight: 800; letter-spacing: .12em; }
+h2 { font-size: calc(1.55rem * var(--site-heading-scale)); letter-spacing: -.025em; margin: 0; }
+h3 { font-size: 1.08rem; margin: 0 0 4px; }
+p { margin-top: 0; }
+.lead { font-size: 1.05rem; max-width: 850px; color: var(--text-muted); }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: calc(14px * var(--site-radius-scale)); padding: calc(22px * var(--site-spacing-scale)); }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.skill { background: var(--surface); border: 1px solid var(--line); padding: 18px; border-radius: calc(12px * var(--site-radius-scale)); }
+.skill h3 { margin-bottom: 9px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag { font-size: .82rem; background: var(--surface-muted); color: var(--site-on-background); border-radius: 6px; padding: 4px 9px; }
+.timeline { border-left: 2px solid var(--line); margin-left: 7px; padding-left: 24px; display: grid; gap: 22px; }
+.job { position: relative; }
+.job::before { content: ""; position: absolute; left: -32px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--site-background); }
+.meta { color: var(--text-muted); font-size: .92rem; margin-bottom: 10px; }
+ul { padding-left: 20px; margin: 10px 0; }
+li { margin: 5px 0; }
+.edu { display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; align-items: start; }
+.edu + .edu { border-top: 1px solid var(--line); padding-top: 17px; margin-top: 17px; }
+.status { display: inline-block; background: var(--site-secondary); color: var(--site-on-secondary); padding: 3px 8px; font-size: .75rem; font-weight: 750; border-radius: 5px; white-space: nowrap; }
+.contact-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.contact-item { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; overflow-wrap: anywhere; }
+.contact-item small { display: block; color: var(--text-muted); text-transform: uppercase; font-weight: 750; letter-spacing: .08em; font-size: .7rem; margin-bottom: 4px; }
+.project-note { border-left: 3px solid var(--accent); background: var(--surface-muted); padding: 15px 18px; border-radius: 0 9px 9px 0; }
+footer { border-top: 1px solid var(--line); padding: 25px; text-align: center; color: var(--text-muted); font-size: .86rem; }
+@media (max-width: 680px) {
+ .hero-inner { padding: 48px 20px 42px; }
+ main { padding: 30px 18px 50px; }
+ nav { padding: 0 18px; gap: 18px; }
+ .grid, .skills, .contact-list { grid-template-columns: 1fr; }
+ .edu { grid-template-columns: 1fr; }
+ .section-head { margin-bottom: 16px; }
+}
+@media (prefers-color-scheme: dark) {
+ .hero p { color: #d7e3f4; }
+}
+@media print {
+ .nav-wrap, .actions { display: none; }
+ body, #app { background: white; color: #172338; }
+ .hero { background: #12233f !important; print-color-adjust: exact; }
+ .card, .skill, .contact-item { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+<header class="hero" id="inicio">
+  <div class="hero-inner">
+    <div class="eyebrow">Currículo profissional · Cuiabá, MT</div>
+    <h1>Edvandro Amancio dos Santos</h1>
+    <p>Analista de Suporte de TI · Redes e Infraestrutura · Engenharia DevOps em formação</p>
+    <p>Profissional de tecnologia com experiência em suporte técnico, administração de sistemas, infraestrutura e atendimento a usuários. Em constante evolução em automação, observabilidade e práticas DevOps.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:edvandroasantos@gmail.com">✉ Entrar em contato</a>
+      <a class="btn" href="https://www.linkedin.com/in/edvandro-amancio/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/edvandroamancio" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</header>
+<div class="nav-wrap"><nav aria-label="Navegação principal">
+<a href="#sobre">Sobre</a><a href="#competencias">Competências</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#formacao">Formação</a><a href="#contato">Contato</a>
+</nav></div>
+<main>
+<section id="sobre">
+  <div class="section-head"><span class="num">01 / PERFIL</span><h2>Resumo profissional</h2></div>
+  <p class="lead">Profissional de TI com mais de cinco anos de experiência em suporte técnico, administração de sistemas e infraestrutura. Possui formação em Redes de Computadores e especialização em Redes e Computação Distribuída, além de cursar Engenharia DevOps. Atua com suporte N1/N2, Active Directory, sistemas corporativos, manutenção de hardware e software e resolução de incidentes. Valoriza comunicação clara, documentação técnica e melhoria contínua.</p>
+</section>
+<section id="competencias">
+  <div class="section-head"><span class="num">02 / TECNOLOGIA</span><h2>Competências técnicas</h2></div>
+  <div class="skills">
+    <article class="skill"><h3>Sistemas operacionais</h3><div class="tags"><span class="tag">Windows Client/Server</span><span class="tag">Linux</span><span class="tag">macOS</span><span class="tag">Android</span><span class="tag">iOS</span></div></article>
+    <article class="skill"><h3>Redes e infraestrutura</h3><div class="tags"><span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">DHCP</span><span class="tag">Roteamento</span><span class="tag">Firewall</span><span class="tag">Wi-Fi</span><span class="tag">Cabeamento</span></div></article>
+    <article class="skill"><h3>Administração de sistemas</h3><div class="tags"><span class="tag">Active Directory</span><span class="tag">Gerenciamento de usuários</span><span class="tag">GPO</span><span class="tag">Help Desk / Service Desk</span></div></article>
+    <article class="skill"><h3>Sistemas corporativos</h3><div class="tags"><span class="tag">TOTVS Protheus</span><span class="tag">SGE</span><span class="tag">Paradigma</span><span class="tag">Gestão de chamados</span><span class="tag">SLAs</span></div></article>
+    <article class="skill"><h3>DevOps — em aprendizado</h3><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Shell scripting</span><span class="tag">AWS / Azure</span></div></article>
+    <article class="skill"><h3>Hardware e suporte</h3><div class="tags"><span class="tag">Diagnóstico</span><span class="tag">Manutenção preventiva</span><span class="tag">Manutenção corretiva</span><span class="tag">Instalação de software</span><span class="tag">Backups</span></div></article>
+  </div>
+</section>
+<section id="experiencia">
+  <div class="section-head"><span class="num">03 / TRAJETÓRIA</span><h2>Experiência profissional</h2></div>
+  <div class="timeline">
+    <article class="job">
+      <h3>Técnico Especializado em TI</h3><div class="meta">Federação das Indústrias do Estado de Mato Grosso (FIEMT) · Cuiabá, MT · Abril/2022 – Atual</div>
+      <ul><li>Suporte técnico N1/N2 ao Diretório Regional e às unidades estaduais, contribuindo para a disponibilidade dos serviços de TI.</li><li>Administração de acessos e usuários por meio do Active Directory.</li><li>Suporte a sistemas corporativos como TOTVS Protheus, SGE, Paradigma e outras aplicações.</li><li>Diagnóstico e resolução de incidentes de hardware, software, rede LAN/Wi-Fi e periféricos.</li><li>Registro e acompanhamento de chamados em sistema de Help Desk, considerando os SLAs.</li></ul>
+    </article>
+    <article class="job">
+      <h3>Técnico de Informática</h3><div class="meta">JVM Informática · Cuiabá, MT · Novembro/2020 – Março/2022</div>
+      <ul><li>Manutenção preventiva e corretiva, montagem, configuração e diagnóstico de PCs, notebooks, smartphones e tablets.</li><li>Instalação e atualização de sistemas operacionais e softwares.</li><li>Resolução de problemas de software, remoção de malware, recuperação de dados e configuração de backups.</li><li>Atendimento direto ao cliente, com diagnósticos e orientações técnicas.</li></ul>
+    </article>
+    <article class="job">
+      <h3>Estagiário de Suporte Técnico (Help Desk)</h3><div class="meta">Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso (IFMT) · Cuiabá, MT · Abril/2016 – Abril/2018</div>
+      <ul><li>Atendimento via Help Desk na Coordenação de TI do campus Octayde Jorge da Silva.</li><li>Abertura, triagem e resolução de chamados de hardware, software e rede.</li><li>Apoio à manutenção de laboratórios de informática e à instalação de softwares educacionais.</li></ul>
+    </article>
+    <article class="job">
+      <h3>Estagiário de Suporte Técnico</h3><div class="meta">Universidade Federal de Mato Grosso (UFMT) · Cuiabá, MT · Abril/2012 – Abril/2014</div>
+      <ul><li>Suporte de hardware e software e orientação a docentes, discentes e pesquisadores.</li><li>Apoio na elaboração de relatórios gerenciais e declarações oficiais.</li><li>Auxílio na manutenção preventiva de equipamentos de informática.</li></ul>
+    </article>
+  </div>
+</section>
+<section id="projetos">
+  <div class="section-head"><span class="num">04 / PRÁTICA</span><h2>Laboratório e projetos</h2></div>
+  <p class="lead">Espaço para registrar experiências práticas, documentação técnica e aprendizados desenvolvidos em laboratório pessoal.</p>
+  <div class="grid">
+    <article class="card"><h3>FOG Project</h3><p>Laboratório de implantação e testes de imaging e deployment de sistemas. Experimentos com a versão 1.6 RC 13 e avaliação de recursos e melhorias.</p><div class="tags"><span class="tag">Linux</span><span class="tag">Deployment</span><span class="tag">PXE / TFTP</span></div></article>
+    <article class="card"><h3>Monitoramento e observabilidade</h3><p>Estudos de monitoramento de infraestrutura com Prometheus e Grafana, com foco em métricas de rede e sistema e visualização de indicadores.</p><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Métricas</span></div></article>
+    <article class="card"><h3>Infraestrutura de rede</h3><p>Laboratório com VyOS para estudar roteamento, serviços de rede e configuração de infraestrutura.</p><div class="tags"><span class="tag">VyOS</span><span class="tag">TCP/IP</span><span class="tag">DHCP</span></div></article>
+    <article class="card"><h3>Documentação e automação</h3><p>Estudos em Linux, Git, shell scripting e fundamentos DevOps para aprimorar rotinas técnicas e documentar procedimentos.</p><div class="tags"><span class="tag">GitHub</span><span class="tag">Linux</span><span class="tag">DevOps</span></div></article>
+  </div>
+  <p class="project-note"><strong>Veja os repositórios:</strong> <a href="https://github.com/edvandroamancio" target="_blank" rel="noopener noreferrer">github.com/edvandroamancio</a>. </p>
+</section>
+<section id="formacao">
+  <div class="section-head"><span class="num">05 / ESTUDOS</span><h2>Formação acadêmica</h2></div>
+  <div class="card">
+    <div class="edu"><div><h3>Especialização em Engenharia DevOps</h3><div class="meta">IFMT · Pós-Graduação Lato Sensu</div></div><span class="status">Em andamento</span></div>
+    <div class="edu"><div><h3>Especialização em Redes e Computação Distribuída</h3><div class="meta">IFMT · Pós-Graduação Lato Sensu</div></div><span class="status">Concluída</span></div>
+    <div class="edu"><div><h3>Tecnólogo em Redes de Computadores</h3><div class="meta">IFMT · 2015–2019</div></div><span class="status">Concluído</span></div>
+    <div class="edu"><div><h3>Bacharelado em Ciência da Computação</h3><div class="meta">UFMT · 2006–2014</div></div><span class="status">Não concluído</span></div>
+    <p class="meta" style="margin:18px 0 0">Previsão de conclusão da especialização em Engenharia DevOps: 1º semestre de 2027.</p>
+  </div>
+</section>
+<section id="idiomas">
+  <div class="section-head"><span class="num">06 / IDIOMAS</span><h2>Idiomas</h2></div>
+  <div class="grid">
+    <article class="card"><h3>Inglês</h3><p>Intermediário — leitura técnica, escrita e conversação em desenvolvimento.</p></article>
+    <article class="card"><h3>Russo</h3><p>Básico.</p></article>
+  </div>
+</section>
+<section id="contato">
+  <div class="section-head"><span class="num">07 / CONEXÕES</span><h2>Contato</h2></div>
+  <div class="contact-list">
+    <div class="contact-item"><small>E-mail</small><a href="mailto:edvandroasantos@gmail.com">edvandroasantos@gmail.com</a></div>
+    <div class="contact-item"><small>Telefone</small><a href="tel:+5565984734656">(65) 98473-4656</a> · <a href="tel:+5565981097645">(65) 98109-7645</a></div>
+    <div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/edvandro-amancio/" target="_blank" rel="noopener noreferrer">linkedin.com/in/edvandro-amancio</a></div>
+    <div class="contact-item"><small>GitHub</small><a href="https://github.com/edvandroamancio" target="_blank" rel="noopener noreferrer">github.com/edvandroamancio</a></div>
+  </div>
+  <p class="meta" style="margin-top:14px">Cuiabá, Mato Grosso, Brasil</p>
+</section>
+</main>
+<footer>© <span id="year">2026</span> Edvandro Amancio dos Santos · Currículo e portfólio profissional</footer>
+</div>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
